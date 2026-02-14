@@ -78,8 +78,31 @@
 
 #### `com.pomodoro.model.Category.java`
 *   ตอนนี้มีแค่ field พื้นฐาน (`id`, `name`, `colorCode`)
+
 *   ถ้า Database มีตาราง `categories` แยกต่างหากก็ต้องมาเพิ่ม Logic ตรงนี้ด้วย
 
 ---
+
+### 1. **Branch หลัก **
+*   `main`: **ห้ามใครแก้ตรงๆ** ต้อง Merge เข้ามาเท่านั้น
+
+### 2. **Branch ของแต่ละคน (Feature Branches)**
+ให้ทุกคนแตก Branch จาก `main` ไปทำงานของตัวเอง:
+
+*   **คนที่ 1 (Database)**: สร้าง branch ชื่อ `feature/database`
+    *   ทำงานเกี่ยวกับ SQL
+*   **คนที่ 2 (PDF)**: สร้าง branch ชื่อ `feature/pdf-export`
+    *   ทำงานเกี่ยวกับ PDF
+*   **คนที่ 3 (Repeating)**: สร้าง branch ชื่อ `feature/repeating-task`
+    *   สร้างไฟล์ RepeatingTask.java
+*   **คนที่ 4 (Deadline)**: สร้าง branch ชื่อ `feature/deadline-task`
+    *   สร้างไฟล์ DeadlineTask.java, Timer Logic บลาๆ
+
+### 3. **วิธีทำงาน**
+1.  **Clone** โปรเจกต์ลงเครื่อง ใช้ git หรือกดโหลดเอาก็ได้
+2.  **Checkout** ไปที่ Branch ตัวเอง: `git checkout -b feature/ชื่อฟีเจอร์`
+3.  **เขียนโค้ด** จนเสร็จ
+4.  **Commit & Push** ขึ้น GitHub
+5.  **Pull Request (PR)** กลับมาที่ `main` ช่วยกันหา error
 
 
