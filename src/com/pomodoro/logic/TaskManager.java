@@ -5,6 +5,7 @@ import com.pomodoro.model.Category;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class TaskManager {
@@ -56,16 +57,20 @@ public class TaskManager {
         categories.add(c);
     }
 
+    // Add Sort. Don't have DB , ExportFile
     public void sortByName() {
         // เขียนเพิ่ม
+        tasks.sort(Comparator.comparing(Task::getTitle));
     }
 
     public void sortByPriority() {
         // เขียนเพิ่ม
+        tasks.sort(Comparator.comparing(Task::getPriority));
     }
 
     public void sortByDueDate() {
         // เขียนเพิ่ม
+        tasks.sort(Comparator.comparing(Task::getDueDate));
     }
 
     public boolean exportAllToFile(String filepath) {
